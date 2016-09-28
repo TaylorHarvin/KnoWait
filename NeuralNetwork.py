@@ -14,6 +14,7 @@ class NeuralNetwork:
     prevInToHidChange = []
     prevHidToOutChange = []
     inputNodeSize = 0
+   
     
     inToOutWeights = [] # ONLY WHEN 0 HID NODES
     prevInToOutChange = [] # ONLY WHEN 0 HID NODES
@@ -123,6 +124,16 @@ class NeuralNetwork:
                     self.inToOutWeights[inToOutIndex] += self.prevInToOutChange[inToOutIndex] 
 
 
+    def getError(self, inputNodes,expectedOutputNodes):
+        nn.processInput(inputNodes);
+        self.trainError = 0;
+        for outNodeIndex in range(len(self.outNodes)):
+            self.trainError += math.pow(expectedOutputNodes[outNodeIndex] - self.outNodes[outNodeIndex],2)
+
+        self.trainError = self.trainError / len(self.outNodes)
+        return self.trainError
+        
+        
     # Pass in one given normalized input set along with expected output for training
     # Give leaning rate and momentum rate to control how much the new input affects the weight update
     # NOTE: also performs the weight change.
@@ -142,6 +153,9 @@ class NeuralNetwork:
                     
         self.ApplyWeightChange(learningRate,momentumRate);
 
+    
+        
+
 random.seed(0)
 #nn = NeuralNetwork(4,3,1)
 nn = NeuralNetwork(4,3,2,[],[])
@@ -149,11 +163,11 @@ nn = NeuralNetwork(4,3,2,[],[])
 #nn.refresh()
 for i in range(1000):
     nn.train([0.5,0.4,0.5,0.6],[0.1,0.8],0.2,0.8)
-    #time.sleep(0.5)
-nn.processInput([0.5,0.4,0.5,0.6]);
-print(nn.outNodes)
+    time.sleep(0.5)
+    nn.processInput([0.5,0.4,0.5,0.6]);
+    print(nn.outNodes,nn.getError([0.5,0.4,0.5,0.6],[0.1,0.8]))
 
-nn2 = NeuralNetwork(4,3,2,nn.inToHidWeights,nn.hidToOutWeights)
+'''nn2 = NeuralNetwork(4,3,2,nn.inToHidWeights,nn.hidToOutWeights)
 nn2.processInput([0.5,0.4,0.5,0.6]);
-print(nn2.outNodes)
+print(nn2.outNodes)'''
 
