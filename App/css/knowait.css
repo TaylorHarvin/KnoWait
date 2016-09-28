@@ -4,7 +4,7 @@ body{
   font: 200 16px/1 Helvetica, Arial, sans-serif;
 }
 
-/*img{width:32.2%;}*/
+/* Progress Bar CSS */
 
 #overlay{
   position:fixed;
@@ -33,3 +33,42 @@ body{
   text-align:center;
   color:#fff;
 }
+
+/* End of Progress Bar CSS */
+
+/* Fully Responsive Image Acting as "False" Background */
+@media screen and (min-width: 1351px) {
+    .backgroundImageView {
+        max-width: 100%; 
+        height: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 801px) {
+    .backgroundImageView {
+        max-width: 175%; 
+        height: auto;
+        position: relative;
+        right: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 451px) {
+    .backgroundImageView {
+        max-width: 300%; 
+        height: auto;
+        position: relative;
+        right: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .backgroundImageView {
+        max-width: 500%; 
+        height: auto;
+        position: relative;
+        right: 700px;
+    }
+}
+
