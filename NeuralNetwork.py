@@ -133,7 +133,6 @@ class NeuralNetwork:
         self.trainError = self.trainError / len(self.outNodes)
         return self.trainError
         
-        
     # Pass in one given normalized input set along with expected output for training
     # Give leaning rate and momentum rate to control how much the new input affects the weight update
     # NOTE: also performs the weight change.
