@@ -1,7 +1,28 @@
 ﻿*{margin:0;}
 
-body{
-  font: 200 16px/1 Helvetica, Arial, sans-serif;
+body, .container {
+    font: 200 16px/1 Helvetica, Arial, sans-serif;
+}
+
+ul, li, a {
+    font: 200 14px/1 Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+/* White Box Debugger
+.white-box {
+    border: 1px solid white;
+}*/
+
+.nav>li {
+    color: white !important;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    color: dodgerblue;
+    background-color: transparent;
 }
 
 /* Progress Bar CSS */
@@ -38,10 +59,26 @@ body{
 
 .menu-logo {
     position: relative;
+    display: block;
+    margin: 0 auto;
     width: 80px;
     height: 80px;
-    left: 50px;
-    top: 10px;
+    left: 0px;
+    top: 0px;
+}
+.ul-menu {
+    padding-right: 3%;
+    padding-top: 2%;
+}
+
+.li-menu {
+    width: 165px;
+    text-align: center;
+}
+
+.li-menu-first-item {
+    width: 142px;
+    text-align: left;
 }
 
 /* Fully Responsive Image Acting as "False" Background */
@@ -51,8 +88,8 @@ body{
 }
 
 .darkFilter {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
     width: 100%;
     height: 100%;
     position: fixed;
