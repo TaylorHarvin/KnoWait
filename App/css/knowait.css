@@ -12,9 +12,9 @@ ul, li, a {
 }
 
 /* White Box Debugger*/
-/*.white-box {
+.white-box {
     border: 1px solid white;
-}*/
+}
 
 .nav>li {
     color: white !important;
@@ -61,21 +61,9 @@ ul, li, a {
 .menu-logo {
     position: relative;
     display: block;
-    margin: 0 auto;
     width: 80px;
     height: 80px;
     top: 7.5px;
-}
-.ul-menu {
-    padding-right: 3%;
-    padding-top: 2%;
-}
-
-.li-menu {
-    /*width: 165px;*/
-    padding-right: 30px;
-    padding-left: 30px;
-    text-align: center;
 }
 
 .li-menu-first-item {
@@ -103,6 +91,22 @@ ul, li, a {
         width: 100%; 
         height: auto;
     }
+
+    .ul-menu {
+        padding-right: 60px;
+        padding-top: 2%;
+    }
+
+    .menu-logo {
+        left: 60px;
+    }
+
+    .li-menu {
+        /*width: 165px;*/
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 1350px) and (min-width: 801px) {
@@ -110,6 +114,21 @@ ul, li, a {
         width: 175%; 
         height: auto;
         left: -300px;
+    }
+    .ul-menu {
+        padding-right: 0px;
+        padding-top: 2%;
+    }
+
+    .menu-logo {
+        left: 30px;
+    }
+
+    .li-menu {
+        /*width: 165px;*/
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
     }
 }
 
@@ -119,6 +138,21 @@ ul, li, a {
         height: auto;
         left: -500px;
     }
+    .ul-menu {
+        padding-right: -15px;
+        padding-top: 2%;
+    }
+
+    .menu-logo {
+        left: 15px;
+    }
+
+    .li-menu {
+        /*width: 165px;*/
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -126,6 +160,22 @@ ul, li, a {
         width: 500%; 
         height: auto;
         left: -750px;
+    }
+
+    .ul-menu {
+        padding-right: -30px;
+        padding-top: 2%;
+    }
+
+    .menu-logo {
+        left: 15px;
+    }
+file:///C:/Users/Inception/Desktop/VolHacks/KnoWait/App/img/dark_filter.png
+    .li-menu {
+        /*width: 165px;*/
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
     }
 }
 
