@@ -2,8 +2,8 @@ import time
 import datetime
 #from dateutil.rrule import rrule, DAILY
 
-fall2016SemStart = datetime.date(2016,8,22);
-fall2016SemEnd = datetime.date(2016,12,10);
+fall2016SemStart = datetime.date(2016,8,22)
+fall2016SemEnd = datetime.date(2016,12,10)
 
 
 def changeDate():

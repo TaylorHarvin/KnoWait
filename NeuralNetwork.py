@@ -1,7 +1,9 @@
-#!C:\Python35\python.exe
+#!\usr\bin\python3
 import random
 import math
 import time
+from decimal import Decimal
+import sys
 
 class NeuralNetwork:
     #inNodes = []
@@ -68,6 +70,9 @@ class NeuralNetwork:
         numer = (val-low)*(targetHigh - targetLow)
         denom = (high - low)
         return (numer/denom)
+    def deNormalize(self, normVal, low, high):
+        return normVal * (high-low) + low
+
 
     # Calculate the output of the neural network given the normalized input set
     def processInput(self, newInputNodes):
@@ -152,21 +157,97 @@ class NeuralNetwork:
                     
         self.ApplyWeightChange(learningRate,momentumRate);
 
-    
-        
 
+#print(str(sys.argv))
 random.seed(0)
 #nn = NeuralNetwork(4,3,1)
-nn = NeuralNetwork(4,3,2,[],[])
+nn = '';
+
+if(sys.argv[1] == "train"):
+    nn = NeuralNetwork(7,6,1,[],[])
+    with open('FallData') as f:
+        for dp in f:
+            if 'str' in dp:
+                    break
+            dataPoint = dp.split(',')
+
+            timePoint = nn.normalize(float(dataPoint[0]), 0, 96, 0, 1)
+            numReceipts = nn.normalize(float(dataPoint[1]), 0, 60, 0, 1)
+            numEmployees = nn.normalize(float(dataPoint[2]), 0, 7, 0, 1)
+            totalSpent = nn.normalize(float(dataPoint[3]), 5, 1000, 0, 1)
+            dayOfMonth = nn.normalize(float(dataPoint[4]), 1, 31, 0, 1)
+            month = nn.normalize(float(dataPoint[5]), 1, 12, 0, 1)
+            dayOfWeek = nn.normalize(float(dataPoint[6]), 0, 6, 0, 1)
+        
+            estWaitTime = nn.normalize(float(dataPoint[7]), 0, 3600, 0, 1)
+            
+            #print([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek])
+            nn.train([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek],[estWaitTime],0.2,0.8)
+
+    #print('_'.join(map(str,nn.inToHidWeights)),"\n",'_'.join(map(str,nn.hidToOutWeights)))
+    f = open("nnWeights_Fall2016",'w+');
+    f.write('_'.join(map(str,nn.inToHidWeights))+"\n"+'_'.join(map(str,nn.hidToOutWeights)));
+    f.close();
+elif(sys.argv[1] == "procin"):
+    nnWeigths = open(sys.argv[2],"r").read().split('\n')
+    inToHid = []
+    hidToOut = []
+    
+    for i,val in enumerate(nnWeigths[0].split('_')):
+        inToHid.append(float(val))
+
+    for i,val in enumerate(nnWeigths[1].split('_')):
+        hidToOut.append(float(val))
+    
+    nn = NeuralNetwork(7,6,1,inToHid,hidToOut)
+
+
 #nn = NeuralNetwork(4,0,2,[],[])
 #nn.refresh()
-for i in range(1000):
+'''for i in range(1000):
     nn.train([0.5,0.4,0.5,0.6],[0.1,0.8],0.2,0.8)
     time.sleep(0.5)
     nn.processInput([0.5,0.4,0.5,0.6]);
-    print(nn.outNodes,nn.getError([0.5,0.4,0.5,0.6],[0.1,0.8]))
+    print(nn.outNodes,nn.getError([0.5,0.4,0.5,0.6],[0.1,0.8]))'''
 
 '''nn2 = NeuralNetwork(4,3,2,nn.inToHidWeights,nn.hidToOutWeights)
 nn2.processInput([0.5,0.4,0.5,0.6]);
 print(nn2.outNodes)'''
 
+
+'''with open('FallData') as f:
+	for dp in f:
+		if 'str' in dp:
+          		break
+		dataPoint = dp.split(',')
+
+		timePoint = nn.normalize(float(dataPoint[0]), 0, 96, 0, 1)
+		numReceipts = nn.normalize(float(dataPoint[1]), 0, 60, 0, 1)
+		numEmployees = nn.normalize(float(dataPoint[2]), 0, 7, 0, 1)
+		totalSpent = nn.normalize(float(dataPoint[3]), 5, 15, 0, 1)
+		dayOfMonth = nn.normalize(float(dataPoint[4]), 1, 31, 0, 1)
+		month = nn.normalize(float(dataPoint[5]), 1, 12, 0, 1)
+		dayOfWeek = nn.normalize(float(dataPoint[6]), 0, 6, 0, 1)
+	
+		estWaitTime = nn.normalize(float(dataPoint[7]), 0, 3600, 0, 1)
+		
+		#print([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek])
+		nn.train([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek],[estWaitTime],0.2,0.8)'''
+
+#306
+timePoint = nn.normalize(39, 0, 96, 0, 1)
+numReceipts = nn.normalize(20, 0, 60, 0, 1)
+numEmployees = nn.normalize(2, 0, 7, 0, 1)
+totalSpent = nn.normalize(200.31, 5, 1000, 0, 1)
+dayOfMonth = nn.normalize(22, 1, 31, 0, 1)
+month = nn.normalize(8, 1, 12, 0, 1)
+dayOfWeek = nn.normalize(0, 0, 6, 0, 1)
+
+estWaitTime = nn.normalize(301.4, 0, 3600, 0, 1)
+
+
+nn.processInput([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek]);
+#print(nn.deNormalize(nn.outNodes[0],0,3600),nn.getError([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek],[estWaitTime]))
+
+
+print(nn.deNormalize(nn.outNodes[0],0,3600))
