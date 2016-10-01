@@ -109,6 +109,8 @@ ul, li, a {
 
     .menu-logo {
         left: 65px;
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -124,6 +126,8 @@ ul, li, a {
 
     .menu-logo {
         left: 40px;
+        width: 80px;
+        height: 80px;
     }
 
 }
@@ -140,6 +144,8 @@ ul, li, a {
 
     .menu-logo {
         left: 20px;
+        width: 80px;
+        height: 80px;
     }
 
 }
@@ -152,6 +158,12 @@ ul, li, a {
     }
     .menu-logo {
         left: -2.5px;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 50px !important;
+        top: 0px !important;
+        padding-bottom: 30px !important;
     }
 }
 
@@ -170,6 +182,11 @@ ul, li, a {
         left: -2.5px;
     }
 
+    .navbar-nav > li > a {
+        padding-top: 50px !important;
+        top: 0px !important;
+        padding-bottom: 30px !important;
+    }
 }
 
 /* navbar */
@@ -211,9 +228,25 @@ ul, li, a {
         border-top: 60px;
     }
 
-.navbar-nav > li > a {padding-top: 0px !important; top: -15px !important; padding-bottom:15px !important;}
+.navbar-nav > li > a {padding-top: 0px !important; top: 0px !important; padding-bottom: 30px !important;}
 .navbar {min-height:60px !important}
 
 .navbar-toggle {
     top: 0px;
+}
+
+.motto {
+    font: 200 60px/1 Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 180px;
+}
+
+.sub-motto {
+    font: 200 16px/1 Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
 }
