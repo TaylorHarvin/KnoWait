@@ -1,8 +1,10 @@
-﻿*{margin:0;}
+﻿* {
+    margin: 0;
+}
 
 body, #overlay {
     font: 200 16px/1 Helvetica, Arial, sans-serif;
-    background:rgb(20, 32, 66); /*#142042*/ 
+    background: rgb(20, 32, 66); /*#142042*/
 }
 
 ul, li, a {
@@ -21,44 +23,46 @@ div {
     border: 1px solid white;
 }*/
 
-.nav>li {
+.nav > li {
     color: white !important;
 }
 
-.nav>li>a:hover,
-.nav>li>a:focus {
-    text-decoration: none;
-    color: dodgerblue;
-    background-color: transparent;
-}
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+        text-decoration: none;
+        color: dodgerblue;
+        background-color: transparent;
+    }
 
 /* Progress Bar CSS */
 
-#overlay{
-  position:fixed;
-  z-index:99999;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  transition: 1s 0.4s;
+#overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 1s 0.4s;
 }
-#progress{
-  height:1px;
-  background:#fff;
-  position:absolute;
-  width:0;
-  top:50%;
+
+#progress {
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    width: 0;
+    top: 50%;
 }
-#progstat{
-  font-size:0.7em;
-  letter-spacing: 3px;
-  position:absolute;
-  top:50%;
-  margin-top:-40px;
-  width:100%;
-  text-align:center;
-  color:#fff;
+
+#progstat {
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
 }
 
 /* End of Progress Bar CSS */
@@ -91,20 +95,20 @@ div {
     z-index: -99998;
 }
 
-    .li-menu {
-        /*width: 165px;*/
-        padding-right: 14px;
-        padding-left: 14px;
-        text-align: center;
-    }
+.li-menu {
+    /*width: 165px;*/
+    padding-right: 12px;
+    padding-left: 12px;
+    text-align: center;
+}
 
-        .ul-menu {
-        padding-top: 30px;
-    }
+.ul-menu {
+    padding-top: 30px;
+}
 
 @media screen and (min-width: 1351px) {
     .backgroundImageView {
-        width: 100%; 
+        width: 100%;
         height: auto;
     }
 
@@ -121,10 +125,11 @@ div {
 
 @media screen and (max-width: 1350px) and (min-width: 801px) {
     .backgroundImageView {
-        width: 175%; 
+        width: 175%;
         height: auto;
         left: -300px;
     }
+
     .ul-menu {
         padding-right: 20px;
     }
@@ -134,15 +139,15 @@ div {
         width: 80px;
         height: 80px;
     }
-
 }
 
-@media screen and (max-width: 800px) and (min-width: 768px) {
+@media screen and (max-width: 800px) and (min-width: 767px) {
     .backgroundImageView {
-        width: 300%; 
+        width: 300%;
         height: auto;
         left: -500px;
     }
+
     .ul-menu {
         padding-right: -15px;
     }
@@ -152,15 +157,15 @@ div {
         width: 80px;
         height: 80px;
     }
-
 }
 
 @media screen and (max-width: 767px) and (min-width: 451px) {
     .backgroundImageView {
-        width: 300%; 
+        width: 300%;
         height: auto;
         left: -500px;
     }
+
     .menu-logo {
         left: -2.5px;
     }
@@ -174,7 +179,7 @@ div {
 
 @media screen and (max-width: 450px) {
     .backgroundImageView {
-        width: 500%; 
+        width: 500%;
         height: auto;
         left: -750px;
     }
@@ -195,19 +200,21 @@ div {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: white; /* Removes border color */
-  background-color: transparent;
+    border-color: white; /* Removes border color */
+    background-color: transparent;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: white; /* Changes regular toggle color */
-}
-.navbar-default .navbar-toggle:hover {
-  background-color: dodgerblue; /* Changes toggle color on hover */
-}
-.navbar-default .navbar-toggle:active {
-  background-color: transparent; /* Changes toggle color on hover */
-}
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white; /* Changes regular toggle color */
+    }
+
+    .navbar-default .navbar-toggle:hover {
+        background-color: dodgerblue; /* Changes toggle color on hover */
+    }
+
+    .navbar-default .navbar-toggle:active {
+        background-color: transparent; /* Changes toggle color on hover */
+    }
 
 
 
@@ -216,42 +223,53 @@ div {
     background-color: transparent;
     border-color: transparent;
 }
-/* title */
-.navbar-default .navbar-brand {
-    color: white;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: dodgerblue;
-}
-/* link */
-.navbar-default .navbar-nav > li > a {
-    color: white;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: dodgerblue;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: dodgerblue;
-    background-color: transparent;
-}
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
-.navbar-default .navbar-nav > .open > a:focus {
-    color: dodgerblue;
-    background-color: transparent;
-}
-/* caret */
+    /* title */
+    .navbar-default .navbar-brand {
+        color: white;
+    }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: dodgerblue;
+        }
+    /* link */
+    .navbar-default .navbar-nav > li > a {
+        color: white;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: dodgerblue;
+        }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: dodgerblue;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: dodgerblue;
+        background-color: transparent;
+    }
+    /* caret */
     .navbar-default .navbar-nav > .dropdown > a .caret {
         border-top-color: red;
         border-top: 60px;
     }
 
-.navbar-nav > li > a {padding-top: 0px !important; top: 0px !important; padding-bottom: 30px !important;}
-.navbar {min-height:60px !important}
+.navbar-nav > li > a {
+    padding-top: 0px !important;
+    top: 0px !important;
+    padding-bottom: 30px !important;
+}
+
+.navbar {
+    min-height: 60px !important;
+}
 
 .navbar-toggle {
     top: 0px;
@@ -290,23 +308,25 @@ div {
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.button-link:hover {
-    background: #356094;
-    border: solid 1px #2A4E77;
-    text-decoration: none;
-}
-.button-link:active {
-    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
-    background: #2E5481;
-    border: solid 1px #203E5F;
-}
+
+    .button-link:hover {
+        background: #356094;
+        border: solid 1px #2A4E77;
+        text-decoration: none;
+    }
+
+    .button-link:active {
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        background: #2E5481;
+        border: solid 1px #203E5F;
+    }
 
 .index-bottom-left {
     padding-top: 240px;
@@ -321,36 +341,35 @@ div {
 
 /*Code to keep footer at the bottom of the page*/
 * {
-  margin: 0;
-  padding: 0;
-} 
+    margin: 0;
+    padding: 0;
+}
 
 html, body {
-  height: 100%;
+    height: 100%;
 }
 
 #wrap {
-  min-height: 100%;
+    min-height: 100%;
 }
 
 #main {
-  overflow: auto;
-  padding-bottom: 180px; /* must be same height as the footer */
+    overflow: auto;
+    padding-bottom: 180px; /* must be same height as the footer */
 }
 
 #footer {
-  position: relative;
-  margin-top: -180px; /* negative value of footer height */
-  height: 180px;
-  clear: both;
-} 
+    position: relative;
+    margin-top: -180px; /* negative value of footer height */
+    height: 180px;
+    clear: both;
+}
 
 /* Opera Fix thanks to Maleika (Kohoutec) */
 body:before {
-  content: "";
-  height: 100%;
-  float: left;
-  width: 0;
-  margin-top: -32767px;/* thank you Erik J - negate effect of float*/
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px; /* thank you Erik J - negate effect of float*/
 }
-
