@@ -12,9 +12,9 @@ ul, li, a {
 }
 
 /* White Box Debugger*/
-.white-box {
+/*.white-box {
     border: 1px solid white;
-}
+}*/
 
 .nav>li {
     color: white !important;
@@ -170,7 +170,6 @@ ul, li, a {
     .menu-logo {
         left: 15px;
     }
-file:///C:/Users/Inception/Desktop/VolHacks/KnoWait/App/img/dark_filter.png
     .li-menu {
         /*width: 165px;*/
         padding-right: 30px;
@@ -179,3 +178,43 @@ file:///C:/Users/Inception/Desktop/VolHacks/KnoWait/App/img/dark_filter.png
     }
 }
 
+/* navbar */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+    background-color: transparent;
+}
+/* caret */
+    .navbar-default .navbar-nav > .dropdown > a .caret {
+        border-top-color: white;
+    }
+
+.navbar-nav > li > a {padding-top:50px !important; padding-bottom:5px !important;}
+.navbar {min-height:60px !important}
