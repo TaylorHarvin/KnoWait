@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AndroidKnoWait</string>
+    <string name="motto">KNOW WHERE THERE'S NO WAIT</string>
+    <string name="sub_motto">Drastically decrease your Waittimes for a more effective schedule.</string>
+    <string name="now_button">NOW</string>
+    <string name="nevigation_button">NAVIGATION</string>
+    <string name="openings_button">OPENING</string>
+    <string name="waiting_button">WAITIMES</string>
+    <string name="daylight_button">DAYLIGHT</string>
+    <string name="about_button">ABOUT</string>
 </resources>
