@@ -61,9 +61,9 @@ ul, li, a {
 .menu-logo {
     position: relative;
     display: block;
-    width: 80px;
-    height: 80px;
-    top: 7.5px;
+    width: 60px;
+    height: 60px;
+    top: -17.5px;
 }
 
 .li-menu-first-item {
@@ -86,6 +86,17 @@ ul, li, a {
     z-index: -99998;
 }
 
+    .li-menu {
+        /*width: 165px;*/
+        padding-right: 14px;
+        padding-left: 14px;
+        text-align: center;
+    }
+
+        .ul-menu {
+        padding-top: 30px;
+    }
+
 @media screen and (min-width: 1351px) {
     .backgroundImageView {
         width: 100%; 
@@ -94,18 +105,10 @@ ul, li, a {
 
     .ul-menu {
         padding-right: 60px;
-        padding-top: 2%;
     }
 
     .menu-logo {
-        left: 60px;
-    }
-
-    .li-menu {
-        /*width: 165px;*/
-        padding-right: 30px;
-        padding-left: 30px;
-        text-align: center;
+        left: 65px;
     }
 }
 
@@ -116,23 +119,16 @@ ul, li, a {
         left: -300px;
     }
     .ul-menu {
-        padding-right: 0px;
-        padding-top: 2%;
+        padding-right: 20px;
     }
 
     .menu-logo {
-        left: 30px;
+        left: 40px;
     }
 
-    .li-menu {
-        /*width: 165px;*/
-        padding-right: 30px;
-        padding-left: 30px;
-        text-align: center;
-    }
 }
 
-@media screen and (max-width: 800px) and (min-width: 451px) {
+@media screen and (max-width: 800px) and (min-width: 768px) {
     .backgroundImageView {
         width: 300%; 
         height: auto;
@@ -140,18 +136,22 @@ ul, li, a {
     }
     .ul-menu {
         padding-right: -15px;
-        padding-top: 2%;
     }
 
     .menu-logo {
-        left: 15px;
+        left: 20px;
     }
 
-    .li-menu {
-        /*width: 165px;*/
-        padding-right: 30px;
-        padding-left: 30px;
-        text-align: center;
+}
+
+@media screen and (max-width: 767px) and (min-width: 451px) {
+    .backgroundImageView {
+        width: 300%; 
+        height: auto;
+        left: -500px;
+    }
+    .menu-logo {
+        left: -2.5px;
     }
 }
 
@@ -164,18 +164,12 @@ ul, li, a {
 
     .ul-menu {
         padding-right: -30px;
-        padding-top: 2%;
     }
 
     .menu-logo {
-        left: 15px;
+        left: -2.5px;
     }
-    .li-menu {
-        /*width: 165px;*/
-        padding-right: 30px;
-        padding-left: 30px;
-        text-align: center;
-    }
+
 }
 
 /* navbar */
@@ -189,7 +183,7 @@ ul, li, a {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: white;
+    color: dodgerblue;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
@@ -197,24 +191,29 @@ ul, li, a {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: white;
+    color: dodgerblue;
 }
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: white;
+    color: dodgerblue;
     background-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: white;
+    color: dodgerblue;
     background-color: transparent;
 }
 /* caret */
     .navbar-default .navbar-nav > .dropdown > a .caret {
-        border-top-color: white;
+        border-top-color: red;
+        border-top: 60px;
     }
 
-.navbar-nav > li > a {padding-top:50px !important; padding-bottom:5px !important;}
+.navbar-nav > li > a {padding-top: 0px !important; top: -15px !important; padding-bottom:15px !important;}
 .navbar {min-height:60px !important}
+
+.navbar-toggle {
+    top: 0px;
+}
