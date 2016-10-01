@@ -19,9 +19,9 @@ div {
 }
 
 /* White Box Debugger*/
-/*.white-box {
+white-box {
     border: 1px solid white;
-}*/
+}
 
 .nav > li {
     color: white !important;
@@ -273,6 +273,7 @@ div {
 
 .navbar-toggle {
     top: 0px;
+    background-color: transparent !important;
 }
 
 .motto {
@@ -339,37 +340,14 @@ div {
     text-align: right;
 }
 
-/*Code to keep footer at the bottom of the page*/
-* {
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 1000px) {
+    .index-bottom-right {
+        text-align: center;
+    }
+    .index-bottom-left {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+    }
 }
 
-html, body {
-    height: 100%;
-}
-
-#wrap {
-    min-height: 100%;
-}
-
-#main {
-    overflow: auto;
-    padding-bottom: 180px; /* must be same height as the footer */
-}
-
-#footer {
-    position: relative;
-    margin-top: -180px; /* negative value of footer height */
-    height: 180px;
-    clear: both;
-}
-
-/* Opera Fix thanks to Maleika (Kohoutec) */
-body:before {
-    content: "";
-    height: 100%;
-    float: left;
-    width: 0;
-    margin-top: -32767px; /* thank you Erik J - negate effect of float*/
-}
