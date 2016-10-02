@@ -50,7 +50,7 @@ class DataPoint:
 		self.dayOfMonth = currDate.day
 		self.month = currDate.month
 		self.dayOfWeek = currDate.weekday()
-		self.waitTime = round(((random.uniform(3.0,3.5)*self.totalSpent) + MIN_WAIT),2)
+		self.waitTime = round(((random.uniform(15.0,30.0)*self.totalSpent) + MIN_WAIT)/self.numEmployees,2)
 		#print(self.waitTime)
 
 	def getPrintVersion(self):

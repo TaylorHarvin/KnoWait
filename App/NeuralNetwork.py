@@ -31,6 +31,7 @@ class NeuralNetwork:
         self.prevInToHidChange = [0.0]*inputNodeSize*hiddenNodeSize
         self.prevHidToOutChange = [0.0]*hiddenNodeSize*outputNodeSize
         self.inputNodeSize = inputNodeSize
+
         if(hiddenNodeSize <= 0):
             if(len(prevInToOtherWeights) > 0):
                self.inToOutWeights = list(prevInToOtherWeights)
@@ -248,15 +249,15 @@ print(nn2.outNodes)'''
 		nn.train([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek],[estWaitTime],0.2,0.8)'''
 
 #306
-timePoint = nn.normalize(39, 0, 96, 0, 1)
+#timePoint = nn.normalize(39, 0, 96, 0, 1)
 #numReceipts = nn.normalize(20, 0, 60, 0, 1)
-numEmployees = nn.normalize(2, 0, 7, 0, 1)
+#numEmployees = nn.normalize(2, 0, 7, 0, 1)
 #totalSpent = nn.normalize(200.31, 5, 1000, 0, 1)
-dayOfMonth = nn.normalize(22, 1, 31, 0, 1)
-month = nn.normalize(8, 1, 12, 0, 1)
-dayOfWeek = nn.normalize(0, 0, 6, 0, 1)
+#dayOfMonth = nn.normalize(22, 1, 31, 0, 1)
+#month = nn.normalize(8, 1, 12, 0, 1)
+#dayOfWeek = nn.normalize(0, 0, 6, 0, 1)
 
-estWaitTime = nn.normalize(301.4, 0, 3600, 0, 1)
+#estWaitTime = nn.normalize(301.4, 0, 3600, 0, 1)
 
 
 #nn.processInput([timePoint,numReceipts,numEmployees,totalSpent,dayOfMonth,month,dayOfWeek]);
