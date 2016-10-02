@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html ng-app="knowaitApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
         <div id="main">
             <!--<div class="center-cropped">
             </div>-->
-            <img src="img/now_wireframe.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
+            <img src="img/index_background.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
             <img src="img/dark_filter.png" class="darkFilter" />
 
             <!--Navbar-->
@@ -80,10 +80,23 @@
                     </script>
             
                 </div>
-                <div class="col-md-3" id="white-box">Something</div>
-                <div class="col-md-12" id="white-box">Something</div>
-
+            <div class="col-md-3" id="white-box">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                    <hr>
+                    
+                </div>
             </div>
+
+</div>
+                <div class="col-md-12" id="white-box">
+                    <h1>5 min. wait at {{yourName}}.</h1>
+                    
+                </div>
+            
+
+        </div>
 
     </div>
     <script
