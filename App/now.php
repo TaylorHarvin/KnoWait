@@ -1,5 +1,30 @@
 ﻿<!DOCTYPE html>
+<?php
+    // Execute python script
+    $num = rand(0,96);
+    $year = rand(2016,2016);
+    $month = rand(8,11);
+    $date = rand(1,30);
 
+    $file_name = "NeuralNetwork.py";
+    $data = "FallData";
+    $weigh = "nnWeights_Fall2016";
+    if (file_exists($file_name))
+    {
+        //echo "File exists"."<br>";
+
+        $command1 = escapeshellcmd("python $file_name $item");
+        $output1 = shell_exec($command1);
+        $command2 = escapeshellcmd("python $file_name procin $weigh $num $year $month $date");
+        $output2 = shell_exec($command2);
+        //echo $command2."<br>";
+       //echo $output2."<br>";
+    }
+    else
+    {
+        echo "No file exits"."<br>";
+    }
+?>
 <html ng-app lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -91,7 +116,7 @@
 
 </div>
                 <div class="col-md-12" id="white-box">
-                    <h1>5 min. wait at {{yourName}}.</h1>
+                    <h1><?php echo round($output2/60,2); ?> min. wait at {{yourName}}.</h1>
                     
                 </div>
             
