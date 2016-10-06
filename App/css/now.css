@@ -1,6 +1,6 @@
 ﻿.now-element-labels {
-    border: 3px solid dodgerblue;
-    background-color: rgba(24,30,52, 0.5);
+    border: 0px solid dodgerblue;
+    background-color: rgba(30, 144, 255, .5); /*rgba(24,30,52, 0.5);*/
     text-align: center;
 }
 
@@ -8,5 +8,5 @@
     width: 100%;
     height: 350px;
     background-color: grey;
-    border: px solid dodgerblue;
+    border: 0px solid dodgerblue;
 }
