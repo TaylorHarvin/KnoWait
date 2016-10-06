@@ -1,4 +1,5 @@
 ﻿.now-element-labels {
-    border: 5px solid dodgerblue;
-    background-color: rgba(51, 153, 255, 0.67);
+    border: 3px solid dodgerblue;
+    background-color: rgba(24,30,52, 0.5);
+    text-align: center;
 }
