@@ -3,3 +3,10 @@
     background-color: rgba(24,30,52, 0.5);
     text-align: center;
 }
+
+#map {
+    width: 100%;
+    height: 350px;
+    background-color: grey;
+    border: px solid dodgerblue;
+}
