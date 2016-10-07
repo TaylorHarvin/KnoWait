@@ -1,19 +1,18 @@
 ﻿<!DOCTYPE html>
-<html ng-app lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html ng-app="knowaitApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>KnoWait -- NOW</title>
+    <title>KnoWait</title>
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bootstrap-btn/css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="js/knowait.js"></script>
-    <script src="js/mapstyle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/knowait.css">
-    <link rel="stylesheet" href="css/now.css">
     <link rel="icon" href="img/knowait_icon.png">
 </head>
 <body>
@@ -33,7 +32,7 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header white-box">
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed navbar-toggle-label" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar white-box"></span>
@@ -41,7 +40,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
+                        <a class="navbar-brand" href="index-day.html"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,42 +48,19 @@
                             <li class="li-menu"><a href="now.html">NAVIGATION</a></li>
                             <li class="li-menu"><a href="now.html">OPENINGS</a></li>
                             <li class="li-menu"><a href="now.html">WAITIMES</a></li>
-                            <li class="li-menu"><a href="now-day.html#">DAYLIGHT</a></li>
+                            <li class="li-menu"><a href="#">DAYLIGHT</a></li>
                             <li class="li-menu about-padding white-box"><a href="#">ABOUT</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-            <div class="container-fluid">
-                <div class="col-md-8" id="white-box">
-                    <h3 class="now-element-labels navigation">NAVIGATION</h3>
-                    <div id="map"></div>
-                </div>
-                <div class="col-md-4" id="white-box">
-                    <h3 class="now-element-labels openings">OPENINGS</h3>
-                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 350px;">
-                        <h1 ng-mouseover="companyName = 'Company A'; waitime = '30'" ng-init="companyName = '..' ">Company A</h1>
-                        <h1 ng-mouseover="companyName = 'Company B'; waitime = '7'"  ng-init="companyName = '..' ">Company B</h1>
-                        <h1 ng-mouseover="companyName = 'Company C'; waitime = '14'"  ng-init="companyName = '..' ">Company C</h1>
-                        <h1 ng-mouseover="companyName = 'Company D'; waitime = '2'"  ng-init="companyName = '..' ">Company D</h1>
-                        <h1 ng-mouseover="companyName = 'Company E'; waitime = '23'"  ng-init="companyName = '..' ">Company E</h1>
-                        <h1 ng-mouseover="companyName = 'Company F'; waitime = '18'"  ng-init="companyName = '..' ">Company F</h1>
-                        <h1 ng-mouseover="companyName = 'Company G'; waitime = '25'"  ng-init="companyName = '..' ">Company G</h1>
-                        <h1 ng-mouseover="companyName = 'Company H'; waitime = '5'"  ng-init="companyName = '..' ">Company H</h1>
-                    </div>
-                </div>
-                <div class="col-md-12" id="white-box">
-                    <h3 class="now-element-labels openings">WAITIMES</h3>
-                    <div class="now-ui waitimes">
-                        <!--<?php echo round($output2/60,2); ?>--> {{waitime}}-minute wait at {{companyName}}.
-                    </div>
-                    
-                </div>
+            <div class="col-md-12 motto white-box">KNOW WHERE THERE'S NO WAIT</div>
+            <div class="col-md-12 sub-motto white-box">Drastically decrease your <i>Waitimes</i> for a more effective schedule.</div>
+            <div class="col-md-12 sub-motto white-box">
+                <a class="button-link button" href="now-day.html">NOW</a>
             </div>
         </div>
-    </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfU_WzZr8o1pWJ75-fxMuKAiGUtd5KdBk&callback=initMap"
-            async defer></script>
 
+    </div>
 </body>
 </html>

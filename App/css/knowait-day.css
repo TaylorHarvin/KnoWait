@@ -1,0 +1,370 @@
+﻿* {
+    margin: 0;
+}
+
+body, #overlay {
+    font: 200 16px/1 Helvetica, Arial, sans-serif;
+    background: rgb(24,30,52); /*#142042*/
+}
+
+ul, li, a {
+    font: 200 14px/1 Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+div {
+    font: 200 16px/1 Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+/* White Box Debugger*/
+
+/*#white-box {
+    border: 1px solid white !important;
+}*/
+
+.nav > li {
+    color: white !important;
+}
+
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+        text-decoration: none;
+        color: dodgerblue;
+        background-color: transparent;
+    }
+
+/* Progress Bar CSS */
+
+#overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 1s 0.4s;
+}
+
+#progress {
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    width: 0;
+    top: 50%;
+}
+
+#progstat {
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/* End of Progress Bar CSS */
+
+.menu-logo {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    top: -17.5px;
+}
+
+.li-menu-first-item {
+    width: 142px;
+    text-align: left;
+}
+
+/* Fully Responsive Image Acting as "False" Background */
+.backgroundImageView {
+    position: fixed;
+    z-index: -99999;
+}
+
+.darkFilter {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -99998;
+}
+
+.li-menu {
+    /*width: 165px;*/
+    padding-right: 12px;
+    padding-left: 12px;
+    text-align: center;
+}
+
+.ul-menu {
+    padding-top: 30px;
+}
+
+@media screen and (min-width: 1351px) {
+    .backgroundImageView {
+        width: 100%;
+        height: auto;
+    }
+
+    .ul-menu {
+        padding-right: 60px;
+    }
+
+    .menu-logo {
+        left: 65px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 801px) {
+    .backgroundImageView {
+        width: 175%;
+        height: auto;
+        left: -300px;
+    }
+
+    .ul-menu {
+        padding-right: 20px;
+    }
+
+    .menu-logo {
+        left: 40px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 767px) {
+    .backgroundImageView {
+        width: 300%;
+        height: auto;
+        left: -500px;
+    }
+
+    .ul-menu {
+        padding-right: -15px;
+    }
+
+    .menu-logo {
+        left: 20px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 451px) {
+    .backgroundImageView {
+        width: 300%;
+        height: auto;
+        left: -500px;
+    }
+
+    .menu-logo {
+        left: -2.5px;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 50px !important;
+        top: 0px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .backgroundImageView {
+        width: 500%;
+        height: auto;
+        left: -750px;
+    }
+
+    .ul-menu {
+        padding-right: -30px;
+    }
+
+    .menu-logo {
+        left: -2.5px;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 50px !important;
+        top: 0px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+.navbar-default .navbar-toggle {
+    border-color: white; /* Removes border color */
+    background-color: transparent;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white; /* Changes regular toggle color */
+    }
+
+    .navbar-default .navbar-toggle:hover {
+        background-color: dodgerblue; /* Changes toggle color on hover */
+    }
+
+    .navbar-default .navbar-toggle:active {
+        background-color: transparent; /* Changes toggle color on hover */
+    }
+
+
+
+/* navbar */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+    /* title */
+    .navbar-default .navbar-brand {
+        color: white;
+    }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: dodgerblue;
+        }
+    /* link */
+    .navbar-default .navbar-nav > li > a {
+        color: white;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: dodgerblue;
+        }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: dodgerblue;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: dodgerblue;
+        background-color: transparent;
+    }
+    /* caret */
+    .navbar-default .navbar-nav > .dropdown > a .caret {
+        border-top-color: red;
+        border-top: 60px;
+    }
+
+.navbar-nav > li > a {
+    padding-top: 0px !important;
+    top: 0px !important;
+    padding-bottom: 30px !important;
+}
+
+.navbar {
+    min-height: 60px !important;
+}
+
+.navbar-toggle {
+    top: 0px;
+    background-color: transparent !important;
+}
+
+.motto {
+    font: 200 60px/1 Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 180px;
+}
+
+.sub-motto {
+    font: 200 16px/1 Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 3px;
+}
+
+.button-link {
+    width: 120px;
+    padding: 10px 15px;
+    background: dodgerblue;
+    color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .button-link:hover {
+        background: #356094;
+        border: solid 1px #2A4E77;
+        text-decoration: none;
+    }
+
+    .button-link:active {
+        -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+        background: #2E5481;
+        border: solid 1px #203E5F;
+    }
+
+.index-bottom-left {
+    padding-top: 240px;
+    padding-left: 35px;
+}
+
+.index-bottom-right {
+    padding-top: 255px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .index-bottom-right {
+        text-align: center;
+    }
+    .index-bottom-left {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.button {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
