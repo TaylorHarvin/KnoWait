@@ -41,47 +41,47 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
+                        <a class="navbar-brand" href="index.html"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right ul-menu">
-                            <li class="li-menu"><a href="#">NAVIGATION</a></li>
-                            <li class="li-menu"><a href="#">OPENINGS</a></li>
-                            <li class="li-menu"><a href="#">WAITIMES</a></li>
+                            <li class="li-menu"><a href="now.html">NAVIGATION</a></li>
+                            <li class="li-menu"><a href="now.html">OPENINGS</a></li>
+                            <li class="li-menu"><a href="now.html">WAITIMES</a></li>
                             <li class="li-menu"><a href="#">DAYLIGHT</a></li>
                             <li class="li-menu about-padding white-box"><a href="#">ABOUT</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-            <div class="col-md-8" id="white-box">
-                <h3 class="now-element-labels">NAVIGATION</h3>
-                <div id="map"></div>
-                <script>
-
-                </script>
-
-            </div>
-            <div class="col-md-4" id="white-box">
-                <h3 class="now-element-labels">OPENINGS</h3>
-                <div>
-                    <label>Name:</label>
-                    <input type="text" ng-model="yourName" placeholder="Enter a name here">
-                    <hr>
-
+            <div class="container-fluid">
+                <div class="col-md-8" id="white-box">
+                    <h3 class="now-element-labels navigation">NAVIGATION</h3>
+                    <div id="map"></div>
+                </div>
+                <div class="col-md-4" id="white-box">
+                    <h3 class="now-element-labels openings">OPENINGS</h3>
+                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 350px;">
+                        <h1 ng-mouseover="companyName = 'Company A'; waitime = '30'" ng-init="companyName = '..' ">Company A</h1>
+                        <h1 ng-mouseover="companyName = 'Company B'; waitime = '7'"  ng-init="companyName = '..' ">Company B</h1>
+                        <h1 ng-mouseover="companyName = 'Company C'; waitime = '14'"  ng-init="companyName = '..' ">Company C</h1>
+                        <h1 ng-mouseover="companyName = 'Company D'; waitime = '2'"  ng-init="companyName = '..' ">Company D</h1>
+                        <h1 ng-mouseover="companyName = 'Company E'; waitime = '23'"  ng-init="companyName = '..' ">Company E</h1>
+                        <h1 ng-mouseover="companyName = 'Company F'; waitime = '18'"  ng-init="companyName = '..' ">Company F</h1>
+                        <h1 ng-mouseover="companyName = 'Company G'; waitime = '25'"  ng-init="companyName = '..' ">Company G</h1>
+                        <h1 ng-mouseover="companyName = 'Company H'; waitime = '5'"  ng-init="companyName = '..' ">Company H</h1>
+                    </div>
+                </div>
+                <div class="col-md-12" id="white-box">
+                    <h3 class="now-element-labels openings">WAITIMES</h3>
+                    <div class="now-ui waitimes">
+                        <!--<?php echo round($output2/60,2); ?>--> {{waitime}}-minute wait at {{companyName}}.
+                    </div>
+                    
                 </div>
             </div>
-
         </div>
-
-        <div class="col-md-12" id="white-box">
-            <h3 class="now-element-labels">WAITIMES</h3>
-            <h1><!--<?php echo round($output2/60,2); ?>--> 5 min. wait at {{yourName}}.</h1>
-
-        </div>
-
-
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfU_WzZr8o1pWJ75-fxMuKAiGUtd5KdBk&callback=initMap"
             async defer></script>
