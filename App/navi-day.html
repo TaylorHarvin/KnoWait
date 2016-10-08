@@ -1,38 +1,40 @@
 ﻿<!DOCTYPE html>
-
-<html  ng-app lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>KnoWait</title>
+    <title>KnoWait -- NOW</title>
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bootstrap-btn/css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="js/knowait.js"></script>
+    <script src="js/mapstyle-day.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/knowait.css">
+    <link rel="stylesheet" href="css/knowait-day.css">
+    <link rel="stylesheet" href="css/now-day.css">
     <link rel="icon" href="img/knowait_icon.png">
 </head>
 <body>
-    <div id="overlay">
+    <!--<div id="overlay">
         <div id="progstat"></div>
         <div id="progress"></div>
-    </div>
+    </div>-->
+
 
     <div id="container">
         <div id="main">
             <!--<div class="center-cropped">
-            </div>-->
-            <img src="img/index_background.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
-            <img src="img/dark_filter.png" class="darkFilter" />
+        </div>-->
+            <img src="img/index_background-day.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
+            <img src="img/dark_filter-day.png" class="darkFilter" />
 
             <!--Navbar-->
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                    <div class="navbar-header white-box">
                         <button type="button" class="navbar-toggle collapsed navbar-toggle-label" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar white-box"></span>
@@ -40,27 +42,30 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
+                        <a class="navbar-brand" href="index-day.html"><img src="img/knowait_logo_1250x1250-day.png" class="menu-logo white-box" /></a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right ul-menu">
-                            <li class="li-menu"><a href="navi.html">NAVIGATION</a></li>
-                            <li class="li-menu"><a href="openings.html">OPENINGS</a></li>
-                            <li class="li-menu"><a href="waitimes.html">WAITIMES</a></li>
-                            <li class="li-menu"><a href="index-day.html">DAYLIGHT</a></li>
-                            <li class="li-menu about-padding white-box"><a href="about.html">ABOUT</a></li>
+                            <li class="li-menu"><a href="navi-day.html">NAVIGATION</a></li>
+                            <li class="li-menu"><a href="openings-day.html">OPENINGS</a></li>
+                            <li class="li-menu"><a href="waitimes-day.html">WAITIMES</a></li>
+                            <li class="li-menu"><a href="navi.html">NIGHTLIGHT</a></li>
+                            <li class="li-menu about-padding white-box"><a href="about-day.html">ABOUT</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-            <div class="col-md-12 motto white-box">KNOW WHERE THERE'S NO WAIT</div>
-            <div class="col-md-12 sub-motto white-box">Drastically decrease your <i>Waitimes</i> for a more effective schedule.</div>
-            <div class="col-md-12 sub-motto white-box">
-                <a class="button-link button" href="now.html">NOW</a>
+            <div class="container-fluid">
+                <div class="col-md-12" id="white-box">
+                    <h3 class="now-element-labels navigation">NAVIGATION</h3>
+                    <div id="map" style="height: 480px;"></div>
+                </div>
             </div>
         </div>
-
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfU_WzZr8o1pWJ75-fxMuKAiGUtd5KdBk&callback=initMap"
+            async defer></script>
+
 </body>
 </html>

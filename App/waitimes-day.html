@@ -12,8 +12,8 @@
     <script src="js/mapstyle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/knowait.css">
-    <link rel="stylesheet" href="css/now.css">
+    <link rel="stylesheet" href="css/knowait-day.css">
+    <link rel="stylesheet" href="css/now-day.css">
     <link rel="icon" href="img/knowait_icon.png">
 </head>
 <body>
@@ -22,12 +22,13 @@
         <div id="progress"></div>
     </div>-->
 
+
     <div id="container">
         <div id="main">
             <!--<div class="center-cropped">
-            </div>-->
-            <img src="img/index_background.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
-            <img src="img/dark_filter.png" class="darkFilter" />
+        </div>-->
+            <img src="img/index_background-day.png" class="backgroundImageView" alt="Image of Line At Chik-fil-A" />
+            <img src="img/dark_filter-day.png" class="darkFilter" />
 
             <!--Navbar-->
             <nav class="navbar navbar-default">
@@ -41,44 +42,38 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="img/knowait_logo_1250x1250.png" class="menu-logo white-box" /></a>
+                        <a class="navbar-brand" href="index-day.html"><img src="img/knowait_logo_1250x1250-day.png" class="menu-logo white-box" /></a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right ul-menu">
-                            <li class="li-menu"><a href="navi.html">NAVIGATION</a></li>
-                            <li class="li-menu"><a href="openings.html">OPENINGS</a></li>
-                            <li class="li-menu"><a href="waitimes.html">WAITIMES</a></li>
-                            <li class="li-menu"><a href="now-day.html">DAYLIGHT</a></li>
-                            <li class="li-menu about-padding white-box"><a href="about.html">ABOUT</a></li>
+                            <li class="li-menu"><a href="navi-day.html">NAVIGATION</a></li>
+                            <li class="li-menu"><a href="openings-day.html">OPENINGS</a></li>
+                            <li class="li-menu"><a href="waitimes-day.html">WAITIMES</a></li>
+                            <li class="li-menu"><a href="waitimes.html">NIGHTLIGHT</a></li>
+                            <li class="li-menu about-padding white-box"><a href="about-day.html">ABOUT</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
             <div class="container-fluid">
-                <div class="col-md-8" id="white-box">
-                    <h3 class="now-element-labels navigation">NAVIGATION</h3>
-                    <div id="map"></div>
-                </div>
-                <div class="col-md-4" id="white-box">
-                    <h3 class="now-element-labels openings">OPENINGS</h3>
-                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 350px;">
-                        <h1 ng-mouseover="companyName = 'Location A'; waitime = '30'" ng-init="companyName = '..' ">Location A</h1>
-                        <h1 ng-mouseover="companyName = 'Location B'; waitime = '7'"  ng-init="companyName = '..' ">Location B</h1>
-                        <h1 ng-mouseover="companyName = 'Location C'; waitime = '14'"  ng-init="companyName = '..' ">Location C</h1>
-                        <h1 ng-mouseover="companyName = 'Location D'; waitime = '2'"  ng-init="companyName = '..' ">Location D</h1>
-                        <h1 ng-mouseover="companyName = 'Location E'; waitime = '23'"  ng-init="companyName = '..' ">Location E</h1>
-                        <h1 ng-mouseover="companyName = 'Location F'; waitime = '18'"  ng-init="companyName = '..' ">Location F</h1>
-                        <h1 ng-mouseover="companyName = 'Location G'; waitime = '25'"  ng-init="companyName = '..' ">Location G</h1>
-                        <h1 ng-mouseover="companyName = 'Location H'; waitime = '5'"  ng-init="companyName = '..' ">Location H</h1>
-                    </div>
-                </div>
                 <div class="col-md-12" id="white-box">
                     <h3 class="now-element-labels openings">WAITIMES</h3>
-                    <div class="now-ui waitimes">
-                        <!--<?php echo round($output2/60,2); ?>--> {{waitime}}-minute wait at {{companyName}}.
+                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 480px;">
+                        <h2>TOP TEN LEAST AMOUNT OF WAITIMES</h2>
+                        <hr>
+                        <h1>2-minute wait at Location D.</h1>
+                        <br />
+                        <h1>5-minute wait at Location H.</h1>
+                        <br />
+                        <h1>7-minute wait at Location B.</h1>
+                        <br />
+                        <h1>14-minute wait at Location C.</h1>
+                        <br />
+                        <h1>18-minute wait at Location F.</h1>
+                        <br />
                     </div>
-                    
+
                 </div>
             </div>
         </div>

@@ -49,34 +49,36 @@
                             <li class="li-menu"><a href="navi.html">NAVIGATION</a></li>
                             <li class="li-menu"><a href="openings.html">OPENINGS</a></li>
                             <li class="li-menu"><a href="waitimes.html">WAITIMES</a></li>
-                            <li class="li-menu"><a href="now-day.html">DAYLIGHT</a></li>
+                            <li class="li-menu"><a href="about-day.html">DAYLIGHT</a></li>
                             <li class="li-menu about-padding white-box"><a href="about.html">ABOUT</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
             <div class="container-fluid">
-                <div class="col-md-8" id="white-box">
-                    <h3 class="now-element-labels navigation">NAVIGATION</h3>
-                    <div id="map"></div>
-                </div>
-                <div class="col-md-4" id="white-box">
-                    <h3 class="now-element-labels openings">OPENINGS</h3>
-                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 350px;">
-                        <h1 ng-mouseover="companyName = 'Location A'; waitime = '30'" ng-init="companyName = '..' ">Location A</h1>
-                        <h1 ng-mouseover="companyName = 'Location B'; waitime = '7'"  ng-init="companyName = '..' ">Location B</h1>
-                        <h1 ng-mouseover="companyName = 'Location C'; waitime = '14'"  ng-init="companyName = '..' ">Location C</h1>
-                        <h1 ng-mouseover="companyName = 'Location D'; waitime = '2'"  ng-init="companyName = '..' ">Location D</h1>
-                        <h1 ng-mouseover="companyName = 'Location E'; waitime = '23'"  ng-init="companyName = '..' ">Location E</h1>
-                        <h1 ng-mouseover="companyName = 'Location F'; waitime = '18'"  ng-init="companyName = '..' ">Location F</h1>
-                        <h1 ng-mouseover="companyName = 'Location G'; waitime = '25'"  ng-init="companyName = '..' ">Location G</h1>
-                        <h1 ng-mouseover="companyName = 'Location H'; waitime = '5'"  ng-init="companyName = '..' ">Location H</h1>
-                    </div>
-                </div>
                 <div class="col-md-12" id="white-box">
-                    <h3 class="now-element-labels openings">WAITIMES</h3>
-                    <div class="now-ui waitimes">
-                        <!--<?php echo round($output2/60,2); ?>--> {{waitime}}-minute wait at {{companyName}}.
+                    <h3 class="now-element-labels openings">ABOUT</h3>
+                    <div class="now-ui" ng-mouseleave="companyName = '..'; waitime = '?'" ng-init="waitime = '?'" style="text-align: center; overflow-y:scroll; height: 480px;">
+                        <h2>UI/UX Design: Preston Nalls</h2>
+                        <br />
+                        <h2>INSPIRATION</h2> 
+                        <hr />
+                        KnoWait was birthed from a need for busy students such as ourselves who don't have time to wait 30min.+ in longs lines for food. <br />Thus, we strive for no waiting by letting the user know instantly where they have immediate access to products and services.
+                        <h2>WHAT IT DOES</h2>
+                        <hr />
+                        It is an easy-to-use web app which uses neural networks (to be implemented) and various inputs (such as number of employees, number of reciepts, peak-times, etc.) to calculate wait-times for it's users. <br /> The app is simple and concise with a emphasis placed on UI/UX, machine-learning algorithms, multi-platformed responsive web design and web development.
+                        <h2>HOW DID WE BUILD IT</h2>
+                        <hr />
+                        The idea for the app was fleshed out by wireframes built with Adobe Fireworks, built with HTML, CSS, and the Bootstrap for the initial user-experience and then integrated neural networks to calculate the NOW (Navigation.Openings.Waitimes.) feature which integrates the Google Maps JavaScript API.
+                        <h2>CHALLENGES WE RAN INTO</h2>
+                        <hr />
+                        Customizing Bootstrap in CSS -- in other words, buildling off of Bootstrap -- was extremely difficult to do for our designs; building them again in Android Studios; <br />Using PHP code for the first time to run the Python scripts; Ultra reponsive web pages for any viewports.
+                        <h2> ACCOMPLISHMENTS THAT WE'RE PROUD OF </h2> 
+                        <hr />
+                        Accurate wait-times that have accurate "Waitimes" whether we feed real or model inputs into the neural network algorithim; our user experience.
+                        <br />
+                        <br />
+                        .
                     </div>
                     
                 </div>
