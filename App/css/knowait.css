@@ -20,8 +20,8 @@ div {
 }
 
 a {
-    -webkit-transition: font-size .5s, color .5s; /* Safari */
-    transition: font-size .5s, color .5s;
+    -webkit-transition: font-size .25s, color .25s; /* Safari */
+    transition: font-size .25s, color .25s;
 }
 
 /* White Box Debugger*/
