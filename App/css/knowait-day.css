@@ -18,6 +18,11 @@ div {
     color: rgb(24,30,52);
 }
 
+a {
+    -webkit-transition: font-size .5s, color .5s; /* Safari */
+    transition: font-size .5s, color .5s;
+}
+
 /* White Box Debugger*/
 
 /*#white-box {
@@ -33,6 +38,7 @@ div {
         text-decoration: none;
         color: dodgerblue;
         background-color: transparent;
+        font-size: 15px;
     }
 
 /* Progress Bar CSS */

@@ -16,6 +16,12 @@ ul, li, a {
 div {
     font: 200 16px/1 Helvetica, Arial, sans-serif;
     color: white;
+
+}
+
+a {
+    -webkit-transition: font-size .5s, color .5s; /* Safari */
+    transition: font-size .5s, color .5s;
 }
 
 /* White Box Debugger*/
@@ -33,6 +39,7 @@ div {
         text-decoration: none;
         color: dodgerblue;
         background-color: transparent;
+        font-size: 15px;
     }
 
 /* Progress Bar CSS */
