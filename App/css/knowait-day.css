@@ -201,12 +201,12 @@ div {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: white; /* Removes border color */
+    border-color: rgb(24,30,52); /* Removes border color */
     background-color: transparent;
 }
 
     .navbar-default .navbar-toggle .icon-bar {
-        background-color: white; /* Changes regular toggle color */
+        background-color: rgb(24,30,52); /* Changes regular toggle color */
     }
 
     .navbar-default .navbar-toggle:hover {
